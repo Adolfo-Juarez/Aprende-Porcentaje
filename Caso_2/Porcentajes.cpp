@@ -1,6 +1,11 @@
 #include <iostream> //Entrada y salida de datos
 #include <cmath> //Operaciones aritméticas avanzadas 
 
+/* 
+	ELABORADO POR LOS ALUMNOS CON MATRÍCULA
+			213358 Y 213375 
+*/
+
 using namespace std;
 
 int Explicacion (float a, int b){ //Función para obtener el porcentaje con los datos dados en entradadeDatos (y explicar al niño)
@@ -26,6 +31,7 @@ int entradadeDatos (){ //Función para entrada de datos
 			cin >> porcentaje; //Entrada del dato del porcentaje
 			if (porcentaje <= 100 && porcentaje >= 1){
 				Explicacion (porcentaje, base);
+				Check = true;
 			}
 			else{
 				cout << "Ingrese una cifra un poco más grande \nInténte un número mayor a 0";
