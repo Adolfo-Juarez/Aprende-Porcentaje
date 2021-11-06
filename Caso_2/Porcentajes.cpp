@@ -8,7 +8,7 @@
 
 using namespace std;
 
-bool Explicacion (int p, int b){ //Función para obtener el porcentaje con los datos dados en entradadeDatos (y explicar al niño) [PROCESO 1]
+bool Explicacion (float p, float b){ //Función para obtener el porcentaje con los datos dados en entradadeDatos (y explicar al niño) [PROCESO 1]
 	
 	float r;
 
@@ -17,7 +17,7 @@ bool Explicacion (int p, int b){ //Función para obtener el porcentaje con los d
 	cout << "\n"<< endl;
 	cout <<"De igual forma, podemos representar dsichos porcentajes en fraccione o decimales\nPor ejemplo:"<<endl;
 	cout << "Para representar un porcentaje en fracción, sólo basta poner en el numerador el porcentaje deseado y en el denominador\nel número 100, pues el porcentaje es una cantidad fraccionaria dividida entre cien (de ahí el nombre, porCENTAJE), para representar tú decisión\nsolo basta escribirlo de la siguiente forma: "<<p<<"/100\n"<<endl;
-	r = p/100;
+	r = p/100.00;
 	cout << "Para representar un porcentaje en decimal, solo basta realizar la fracción anterior, es decir, dividir el porcentaje entre 100. \nEn este caso sería \n\n"<<p<<"/100 = "<<r<<"\n\nde esta forma, obtenemos el porcentaje en su forma decimal."<<endl;
 
 
