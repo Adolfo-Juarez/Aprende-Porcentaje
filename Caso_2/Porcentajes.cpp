@@ -9,23 +9,32 @@
 using namespace std;
 
 int Explicacion (float a, int b){ //Función para obtener el porcentaje con los datos dados en entradadeDatos (y explicar al niño)
-	float r; //Variable para guardar el resultado de la operación
-
+	
 	cout << "Usted ha ingresado el valor "<<a<<", esto representa el 100%"<< endl;
 	cout << "para calcular el "<< b << "% de esta cantidad podemos emplear muchos métodos"<<endl;
 	cout << "\n"<< endl;
-	r=Porcentaje (a,b);
 
-	
 }
 
-float Porcentaje (float a, int b){
+float Porcentaje (float a, int b){ //Obtener porcentaje de los valores dados, para poder transformar los valores de la funcion explicacions sin problemas
 	float c,d;
 
 	c=a*100;
 	d=c/b;
 
 	return d;
+}
+
+int ExplainA (float a, int b){ //Función para explicar el procedimiento del modo A
+	float r;
+
+	r = Porcentaje (a,b);
+}
+
+int ExplainB (float a, int b){ //Función para explicar el procedimiento del modo B
+	float r;
+
+	r = Porcentaje (a,b);
 }
 
 void entradadeDatos (){ //Función para entrada de datos
