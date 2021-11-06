@@ -7,6 +7,6 @@ int entradadeDatos (){
 
 }
 
-int main (){
+int main (){ //bhjg
 
 }
