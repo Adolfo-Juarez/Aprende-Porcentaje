@@ -8,11 +8,18 @@
 
 using namespace std;
 
-int Explicacion (float a, int b){ //Función para obtener el porcentaje con los datos dados en entradadeDatos (y explicar al niño)
+bool Explicacion (int p, int b){ //Función para obtener el porcentaje con los datos dados en entradadeDatos (y explicar al niño) [PROCESO 1]
 	
-	cout << "Usted ha ingresado el valor "<<a<<", esto representa el 100%"<< endl;
-	cout << "para calcular el "<< b << "% de esta cantidad podemos emplear muchos métodos"<<endl;
+	float r;
+
+	cout << "Usted ha ingresado el valor "<<b<<", esto representa el 100%"<< endl;
+	cout << "para calcular el "<< p << "% de esta cantidad podemos emplear muchos métodos, los cuales veremos más adelante"<<endl;
 	cout << "\n"<< endl;
+	cout <<"De igual forma, podemos representar dsichos porcentajes en fraccione o decimales\nPor ejemplo:"<<endl;
+	cout << "Para representar un porcentaje en fracción, sólo basta poner en el numerador el porcentaje deseado y en el denominador\nel número 100, pues el porcentaje es una cantidad fraccionaria dividida entre cien (de ahí el nombre, porCENTAJE), para representar tú decisión\nsolo basta escribirlo de la siguiente forma: "<<p<<"/100\n"<<endl;
+	r = p/100;
+	cout << "Para representar un porcentaje en decimal, solo basta realizar la fracción anterior, es decir, dividir el porcentaje entre 100. \nEn este caso sería \n\n"<<p<<"/100 = "<<r<<"\n\nde esta forma, obtenemos el porcentaje en su forma decimal."<<endl;
+
 
 }
 
@@ -38,8 +45,7 @@ int ExplainB (float a, int b){ //Función para explicar el procedimiento del mod
 }
 
 void entradadeDatos (){ //Función para entrada de datos
-	float porcentaje; //Variable para saber qué porcentaje obtener
-	int base; //Variable del número a obtener porcentaje
+	int base, porcentaje; //Variable del número a obtener porcentaje y para saber qué porcentaje obtener
 	bool Check; //Resvisor para bucles de error
 
 	cout << "Bienvenido a la calculadora de porcentajes\n"<<endl; //Saludo inicial
@@ -51,7 +57,6 @@ void entradadeDatos (){ //Función para entrada de datos
 			cout <<"\n"<<endl; //Salto de línea
 		}
 		else{
-			cout <<"\n"<<endl; //Salto de línea
 			cout <<"Por favor ingrese el porcentaje que desea calcular (1-100): ";
 			cin >> porcentaje; //Entrada del dato del porcentaje
 			if (porcentaje <= 100 && porcentaje >= 1){
@@ -59,7 +64,7 @@ void entradadeDatos (){ //Función para entrada de datos
 				Check = true;
 			}
 			else{
-				cout << "Ingrese una cifra un poco más grande \nInténte un número mayor a 0";
+				cout << "Ingrese una cifra válida \nInténte un número entre el 1 y el 100";
 				cout <<"\n"<<endl; //Salto de línea
 			}
 		}
